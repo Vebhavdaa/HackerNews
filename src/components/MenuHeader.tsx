@@ -9,20 +9,14 @@ interface MenuHeaderProps {
 }
 
 const MenuHeader: React.FC<MenuHeaderProps> = ({ setApi, setStart, setEnd }) => {
-  const [activeButton, setActiveButton] = useState<string>(() => {
-    // Retrieve the active button from localStorage if available, otherwise default to 'New'
-    return localStorage.getItem('activeButton') || 'New';
-  });
+  const [activeButton, setActiveButton] = useState<string>('');
 
-  useEffect(() => {
-    // Save activeButton to localStorage
-    localStorage.setItem('activeButton', activeButton);
-  }, [activeButton]);
+ 
 
   const handleChange = (inp: string) => {
     setActiveButton(inp);
-    if (inp === 'New') setApi('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty');
-    else setApi('https://hacker-news.firebaseio.com/v0/askstories.json?print=pretty');
+    if (inp === 'New') setApi('https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty');
+    else setApi('https://hacker-news.firebaseio.com/v0/beststories.json?print=pretty');
     setStart(0);
     setEnd(5);
   };
