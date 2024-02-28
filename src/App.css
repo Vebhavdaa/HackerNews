@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 :root {
-  --font-family: "Open Sans", sans-serif;
+  --font-family: "Open Sans";
   --yellow: #fbc91b;
   --black: #000000;
   --description-color: #000000d1;
@@ -26,15 +26,17 @@
   font-family: var(--font-family) !important;
   font-size: 19px !important;
   font-weight: 700 !important;
-  line-height: 16.34px !important;
   color: var(--black);
+  opacity: 82% !important;
+
 }
 .description {
   font-family: var(--font-family) !important;
   font-size: 15px !important;
   font-weight: 400 !important;
-  line-height: 16.34px !important;
   color: var(--description-color) !important;
+  opacity: 82% !important;
+
 }
 .metadata {
   font-family: var(--font-family) !important;
@@ -44,6 +46,7 @@
   color: var(--metadata-color) !important;
 }
 .button-font {
+  font-family: var(--font-family);
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
@@ -63,7 +66,7 @@
   width: 100%;
   padding: 13px 16px;
   border-radius: 4px;
-  background-color: #fbc91b;
+  background-color: #FFC700;
   border: none;
   cursor: pointer;
 }
@@ -82,3 +85,6 @@ a {
   color: var(--black);
   text-decoration: none;
 }
+
+
+
