@@ -1,13 +1,14 @@
 import React from 'react';
 
 interface LoadMoreButtonProps {
-  setStart: React.Dispatch<React.SetStateAction<number>>;
   setEnd: React.Dispatch<React.SetStateAction<number>>;
+  ids:number[];
+  end:number
 }
 
-const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ setStart, setEnd }) => {
+const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({  setEnd,ids,end }) => {
   const handleClick = () => {
-    setStart(prev => prev + 5);
+    if(ids.length<=end) return;
     setEnd(prev => prev + 5);
   };
 
@@ -17,3 +18,4 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ setStart, setEnd }) => 
 };
 
 export default LoadMoreButton;
+
