@@ -23,7 +23,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ news }) => {
   };
   return (
     <Box mb={2}>
-      <a href={news.url} target="_blank" rel="noopener noreferrer">
+       <a href={news.url} target="_blank" rel="noopener noreferrer">
         <Card
           sx={{
             borderRadius: "12px",
@@ -58,6 +58,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ news }) => {
           </CardContent>
         </Card>
       </a>
+      
     </Box>
   );
 };
